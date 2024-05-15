@@ -48,21 +48,21 @@ class ClientGUI {
 
 		in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-		// Create GUI components
+		
 		frame = new Frame("Chat Client");
 		chatArea = new TextArea();
 		inputField = new TextField();
 		sendButton = new Button("Send");
 
-		// Set layout
+		
 		frame.setLayout(new BorderLayout());
 
-		// Add components to frame
+		
 		frame.add(chatArea, BorderLayout.CENTER);
 		frame.add(inputField, BorderLayout.SOUTH);
 		frame.add(sendButton, BorderLayout.EAST);
 
-		// Event handling
+		
 		sendButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String message = inputField.getText();
@@ -72,7 +72,7 @@ class ClientGUI {
 			}
 		});
 
-		// Display frame
+		
 		frame.setSize(400, 300);
 		frame.setVisible(true);
 
